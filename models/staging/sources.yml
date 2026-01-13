@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: instacart
+    database: DBT_ANALYTICS
+    schema: DBT_RAW
+    tables:
+      - name: orders
