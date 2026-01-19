@@ -12,6 +12,7 @@ group by o.customer_id, c.first_name, c.last_name
 -- this is the first changes i'm making. 
 -- this is the second changes i'm making. 
 -- this is the third changes i'm making. 
+
 -- this is the forth changes i'm making. 
 -- this is the five changes i'm making. 
--- this is the six changes i'm making. 
+-- this is the six changes i'm making.
