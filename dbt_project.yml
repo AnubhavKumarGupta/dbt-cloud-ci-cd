@@ -40,3 +40,6 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+vars:
+  default_status: "'Unknown'"
+  default_order_date: "'1900-01-01'"

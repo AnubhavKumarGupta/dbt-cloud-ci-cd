@@ -10,3 +10,5 @@ join {{ ref("stg_customers1") }} c on o.customer_id = c.customer_id
 group by o.customer_id, c.first_name, c.last_name
 
 -- this is the first changes i'm making. 
+-- this is the second changes i'm making. 
+-- this is the third changes i'm making. 

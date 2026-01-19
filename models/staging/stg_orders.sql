@@ -1,8 +1,6 @@
 
 {{ config(materialized='view') }}
 
-{% set default_status = "'Unknown'" %}
-{% set default_order_date = "'1900-01-01'" %}
 
 select
     order_id,
