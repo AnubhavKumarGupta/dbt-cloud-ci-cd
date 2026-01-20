@@ -1,6 +1,8 @@
 {{ config(
     materialized='view',
 
+
+
     pre_hook="
       insert into DBT_DB.DBT_SAGAR.DBT_AUDIT_LOG
       (model_name, status, row_count, event_time)

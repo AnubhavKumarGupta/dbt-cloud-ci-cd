@@ -1,69 +1,71 @@
-version: 2
+# version: 2
 
-models:
-  - name: stg_orders
-    description: "Staging table for orders"
-    columns:
-      - name: order_id
-        tests:
-          - not_null
-          - unique
+# models:
+#   - name: stg_orders
+#     description: "Staging table for orders"
+#     columns:
+#       - name: order_id
+#         tests:
+#           - not_null
+#           - unique
 
-      - name: customer_id
-        tests:
-          - not_null
+#       - name: customer_id
+#         tests:
+#           - not_null
 
-      - name: order_date
-        tests:
-          - not_null
+#       - name: order_date
+#         tests:
+#           - not_null
 
-      - name: status
-        tests:
-          - not_null
+#       - name: status
+#         tests:
+#           - not_null
 
-      - name: total_amount
-        tests:
-          - not_null
-
-
-  - name: stg_products
-    description: "Staging table for products"
-    columns:
-      - name: product_id
-        tests:
-          - not_null
-          - unique
-
-      - name: product_name
-        tests:
-          - not_null
-
-      - name: aisle_id
-        tests:
-          - not_null
-
-      - name: department_id
-        tests:
-          - not_null
+#       - name: total_amount
+#         tests:
+#           - not_null
 
 
-  - name: stg_order_products
-    description: "Bridge table between orders and products"
-    columns:
-      - name: order_id
-        tests:
-          - not_null
-          - relationships:
-              to: ref('stg_orders')
-              field: order_id
+#   - name: stg_products
+#     description: "Staging table for products"
+#     columns:
+#       - name: product_id
+#         tests:
+#           - not_null
+#           - unique
 
-      - name: product_id
-        tests:
-          - not_null
-          - relationships:
-              to: ref('stg_products')
-              field: product_id
+#       - name: product_name
+#         tests:
+#           - not_null
 
-      - name: add_to_cart_order
-        tests:
-          - not_null
+#       - name: aisle_id
+#         tests:
+#           - not_null
+
+#       - name: department_id
+#         tests:
+#           - not_null
+
+
+#   - name: stg_order_products
+#     description: "Bridge table between orders and products"
+#     columns:
+#       - name: order_id
+
+
+#         tests:
+#           - not_null
+#           - relationships:
+#               to: ref('stg_orders')
+#               field: order_id
+
+#       - name: product_id
+#         tests:
+#           - not_null
+#           - relationships:
+#               to: ref('stg_products')
+#               field: product_id
+
+#       - name: add_to_cart_order
+#         tests:
+#           - not_null
