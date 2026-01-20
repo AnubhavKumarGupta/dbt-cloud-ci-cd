@@ -51,6 +51,8 @@ models:
     description: "Bridge table between orders and products"
     columns:
       - name: order_id
+
+
         tests:
           - not_null
           - relationships:
