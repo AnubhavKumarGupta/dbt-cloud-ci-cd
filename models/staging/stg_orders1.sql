@@ -1,4 +1,10 @@
 {{ config(materialized="view") }}
 
-select order_id, customer_id, order_date, status, total_amount
+select
+  order_id,
+  customer_id,
+  order_date,
+  status,
+  total_amount
 from {{ source("raw", "orders") }}
+where total_amount is not null
